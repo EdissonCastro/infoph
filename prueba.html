@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="validacion.js"></script>
+</head>
+<body>
+
+	<p id="notificacion"></p>
+
+	<form name="formulario">
+		<p>Identificación: <input type="text" id="identificacion" placeholder="Identificación"></p>
+		<p>Nombres: <input type="text" id="nombres" placeholder="Nombres"></p>
+		<p>Apellidos: <input type="text" id="apellidos" placeholder="Apellidos"></p>
+		<p>
+			<select name ="tipoInmueble" onChange="validarTipoInmueble(this.value);">
+   				<option value="0">Seleccione un tipo de inmueble</option> 
+   				<option value="1">Casa</option> 
+   				<option value="2">Apartamento</option>
+			</select>
+		</p>
+
+		<p id="campoCasa"></p>
+		<p id="interior"></p>
+		<p id="apartamento"></p>
+
+		<p>
+			<select name ="tipoVehiculo">
+   				<option value="0" id="ningunaOpcion">Seleccione el tipo de vehículo que posee</option> 
+   				<option value="1">Carro</option> 
+   				<option value="2">Motocicleta</option>
+   				<option value="3">Bicicleta</option>
+   				<option value="4">Ninguno</option>
+			</select>
+		</p>
+
+		<p id="placaVehiculo"></p>	
+				
+	</form>
+
+	<input type="button" value="Registrar" onClick="validarForm();">
+</body>
+</html>
